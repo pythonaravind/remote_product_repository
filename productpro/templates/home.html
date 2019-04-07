@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>home page</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h2{
+        font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+
+    }
+    .btn{
+        border-radius: 150px;
+        box-shadow: 2px 2px orange;
+        text-shadow: 2px 2px 2px black;
+        padding: 0px 20px ;
+        margin: 0px 15px;
+        font-size: 20px;
+        background-color:black;
+    }
+    .jumbotron{
+        background: darkcyan;
+        padding: 20px;
+        border-radius:30px;
+        margin:20px
+    }
+    a:link{
+        color: white;
+        background-color:darkorange;
+    }
+    a:visited{
+        color: white;
+        background-color: darkorange;
+
+    }
+    a:hover{
+        color:black;
+        background-color: green;
+    }
+</style>
+<body>
+<center>
+<h2>PTSM AGENCIES</h2>
+</center>
+<center><h2>select the option to perform action</h2></center>
+<div class="jumbotron">
+    <center>
+            <a href="/insert/"class="btn btn ">insert</a>
+            <a href="/update/"class="btn btn ">update</a>
+            <a href="/details/"class="btn btn ">details</a>
+            <a href="/delete/"class="btn btn ">delete</a>
+    </center>
+</div>
+</body>
+{% block content %}
+{% endblock %}
+<div class="container">
+    <div class="row">
+        <div id="div01" class="col-md-4">
+            <pre><center>
+            <h2>branch1:  </h2></center>
+            ptsm.agencies
+            somajiguda,
+            ptsmagencies@gmail.com
+            p.no:+91-9181716151
+            </pre>
+        </div>
+
+        <div id="div01" class="col-md-4">
+            <pre><center>
+            <h2>branch2:  </h2></center>
+            ptsm.agencies
+            abids,
+            ptsmagencies@gmail.com
+            p.no:+91-9181716161
+            </pre>
+        </div>
+        <div id="div01" class="col-md-4">
+            <pre><center>
+            <h2>main office:</h2></center>
+            ptsm.agencies
+            barkathpura,
+            ptsmagencies@gmail.com
+            p.no:+91-9181716141
+            </pre>
+        </div>
+    </div>
+</div>
+</html>

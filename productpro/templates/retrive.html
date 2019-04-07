@@ -1,0 +1,65 @@
+{% extends 'home.html' %}
+<html>
+{% block content %}
+<head>
+    <title>retriving</title>
+
+</head>
+    <style>
+    table{
+        border: 5px black solid;
+        text-align: center;
+    }
+    th,td{
+        height: 30px;
+        width: 90px;
+
+        }
+    #h01{
+        font-size: 20px;
+        color: darkorange;
+    }
+    </style>
+<body>
+<center>
+    <h2> avialiable product details</h2>
+</center><br>
+{% if rdatah %}
+<center>
+    <table border="6px">
+        <thead>
+        <tr>
+            <th>product id</th>
+            <th>product type</th>
+            <th>product cost</th>
+            <th>product class</th>
+            <th>product color</th>
+            <th>brand</th>
+            <th>organisation mobile no</th>
+            <th>organisation email</th>
+        </tr>
+        </thead>
+        {% for i in rdatah %}
+        <tbody>
+        <tr>
+            <td>{{ i.product_id}}</td>
+            <td>{{ i.product_type}}</td>
+            <td>{{ i.product_cost}}</td>
+            <td>{{ i.product_class}}</td>
+            <td>{{ i.product_color}}</td>
+            <td>{{ i.brand_name}}</td>
+            <td>{{ i.organisation_mobile}}</td>
+            <td>{{ i.organisation_email}}</td>
+        </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</center>
+{% else %}
+    <center>
+    <h2 id="h01">products not avilable</h2>
+    </center>
+{% endif %}
+</body>
+{% endblock %}
+</html>
